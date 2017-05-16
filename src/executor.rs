@@ -11,6 +11,6 @@
 #[cfg(feature = "use_std")]
 pub use task_impl::{Unpark, Executor, Run};
 
-pub use task_impl::{Spawn, spawn, Notify};
-
-pub use task_impl::{UnsafeNotify, NotifyHandle};
+#[cfg(feature = "use_std")]
+pub use task_impl::{Wait, with_wait};
+pub use task_impl::{Spawn, spawn, Notify, UnsafeNotify, NotifyHandle};
